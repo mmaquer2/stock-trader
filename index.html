@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stock Tester</title>
+    <link rel = "stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src = "app.js"></script>
+    
+</head>
+<body>
+    <header>
+       <h2> Stock Research App. io</h2>
+
+    </header>
+    <main>
+        <input type = "text" id = "ticker">
+        <br>
+        <button  onclick = "search()">Search</button>
+        <br>
+
+        <canvas id="myChart" width="400" height="400"></canvas>
+      
+        
+        <br>
+        <div class = "fundamentals">
+            <p> PE Ratio: </p>
+            <p> Market Cap: </p>
+            <p> Dividend: </p>
+
+
+        </div>
+        <br>
+
+        <div class = "events">
+
+            <p> Top Headlines:</p>
+
+        </div>
+
+
+
+    </main>
+    <footer>
+        Created by Mike Maquera, 2019. 
+    </footer>
+</body>
+</html>
