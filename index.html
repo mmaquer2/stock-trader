@@ -13,6 +13,11 @@
 <body>
     <header>
        <h2> Stock Research App. io</h2>
+       <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button" onclick="openCity('fund')">Fundamental Analysis</button>
+        <button class="w3-bar-item w3-button" onclick="openCity('alt')">Alternate Data View</button>
+        <button class="w3-bar-item w3-button" onclick="openCity('tech')">Technical Outlook</button>
+      </div>
 
     </header>
     <main>
@@ -21,28 +26,51 @@
         <button  onclick = "search()">Search</button>
         <br>
 
-        <canvas id="myChart" width="400" height="400"></canvas>
-      
-        
+        <div id="fund" class="city">
+                <h2 id = "company-name "></h2>
+             
+        <canvas id="myChart" width="200" height="200"></canvas>
+            
         <br>
-        <div class = "fundamentals">
+        
             <p> PE Ratio: </p>
             <p> Market Cap: </p>
+            <p> Revenue:  </p>
+            <p> EBITDA </p> 
             <p> Dividend: </p>
 
 
-        </div>
         <br>
 
-        <div class = "events">
 
             <p> Top Headlines:</p>
 
-        </div>
+        <
 
+    </div>
+
+
+    <div id="tech" class="city">
+
+
+
+    </div>
+
+    <div id="alt" class="city">
+            <h4> Alternate Data Outlook</h4>
+
+            <p> Stock twit mentions: </p>
+            <p> google trends and searches </p>
+    
+    
+    
+        </div>
+    
 
 
     </main>
+
+
     <footer>
         Created by Mike Maquera, 2019. 
     </footer>
