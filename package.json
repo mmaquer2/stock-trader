@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "chart.js": "^2.9.3",
-    "electron": "^7.1.2"
+    "electron": "^7.1.2",
+    "surge": "^0.21.3"
   }
 }
