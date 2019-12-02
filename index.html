@@ -7,12 +7,14 @@
     <title>Stock Tester</title>
     <link rel = "stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://kit.fontawesome.com/8965181dc2.js"></script>
     <script src = "app.js"></script>
     
 </head>
 <body>
     <header>
        <h2> Stock Oracle.io</h2>
+        <h4 id = "date"></h4>
        
     </header>
     <main>
@@ -24,6 +26,10 @@
 
     <br>
     
+    <div class = "index">
+        SPY: <p id = "SPX"></p>       NDSQ: <p id = "NDX"></p>       DIA: <p id = "DJI"></p>         
+
+    </div>
         <input type = "text" id = "ticker">
         <br>
         <br>
@@ -33,21 +39,11 @@
         <div id="fund" class="city">
                 <h2 id = "company-name "></h2>
              
-        <canvas id="myChart" width="200" height="200"></canvas>
+        <canvas id="myChart" width="200px" height="200px"></canvas>
             
         <br>
         
-            <p> PE Ratio: </p>
-            <p> Market Cap: </p>
-            <p> Revenue:  </p>
-            <p> EBITDA </p> 
-            <p> Dividend: </p>
-
-
-        <br>
-
-
-            <p> Top Headlines:</p>
+        <p id = "fund-results"></p>
 
         
 
@@ -56,15 +52,17 @@
 
     <div id="tech" class="city">
 
-        <h4>Technical Data </h4>
+        
+
+        <p id = "tech-results"></p>
 
     </div>
 
     <div id="alt" class="city">
-            <h4> Alternate Data Outlook</h4>
+            
 
-            <p> Stock twit mentions: </p>
-            <p> google trends and searches </p>
+            <p id = "alt-results"></p>
+
     
     
     
