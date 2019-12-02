@@ -12,19 +12,23 @@
 </head>
 <body>
     <header>
-       <h2> Stock Research App. io</h2>
-       <div class="w3-bar w3-black">
+       <h2> Stock Oracle.io</h2>
+       
+    </header>
+    <main>
+    <div class="w3-bar w3-black">
         <button class="w3-bar-item w3-button" onclick="openCity('fund')">Fundamental Analysis</button>
         <button class="w3-bar-item w3-button" onclick="openCity('alt')">Alternate Data View</button>
         <button class="w3-bar-item w3-button" onclick="openCity('tech')">Technical Outlook</button>
       </div>
 
-    </header>
-    <main>
+    <br>
+    
         <input type = "text" id = "ticker">
         <br>
-        <button  onclick = "search()">Search</button>
         <br>
+        <button  onclick = "search()">Search</button>
+        
 
         <div id="fund" class="city">
                 <h2 id = "company-name "></h2>
@@ -45,14 +49,14 @@
 
             <p> Top Headlines:</p>
 
-        <
+        
 
     </div>
 
 
     <div id="tech" class="city">
 
-
+        <h4>Technical Data </h4>
 
     </div>
 
@@ -69,7 +73,6 @@
 
 
     </main>
-
 
     <footer>
         Created by Mike Maquera, 2019. 
