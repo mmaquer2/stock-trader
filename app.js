@@ -71,6 +71,7 @@ async function baselines() {
 async function search() {
 
     var tick = document.getElementById("ticker").value
+    document.getElementById('company-name').innerHTML = tick;
 
     const url = "https://simfin.com/api/v1/companies/id/59265/shares/prices?api-key=C3l8ZkjFsFahwrd7V3OA6aoFirCvGKS4";
 
