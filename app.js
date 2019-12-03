@@ -3,7 +3,7 @@ window.onload = function(){
     
     this.baselines()
     this.date()
-
+    this.stock_news();
 }
 
 //Simple test function 
