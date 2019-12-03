@@ -73,6 +73,11 @@ async function search() {
     //var tick = document.getElementById("ticker").value
     //document.getElementById('company-name').innerHTML = tick;
 
+    const start = ""
+    const query = ""
+    const key = ""
+    //const url = start + query + key
+
     const url = "https://simfin.com/api/v1/companies/id/59265/shares/prices?api-key=C3l8ZkjFsFahwrd7V3OA6aoFirCvGKS4";
 
     const resp = await fetch(url);
@@ -93,6 +98,7 @@ async function search() {
 
     //run graph function
     graph(result,result2)
+    //fund_data(tick);
 
     
 }
@@ -107,9 +113,9 @@ async function search() {
     var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['', '', ],
             datasets: [{
-                label: 'COMPANY NAME HERE',
+                label: '',
                 data: [a, b],
 
 
@@ -127,18 +133,56 @@ async function search() {
 //revnue
 //dividend
  //const alpha_key = ('YIF9NU7FLVJWG46Q');
- async function stock_api() {
-    const url = ('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=MSFT&apikey=YIF9NU7FLVJWG46Q');
+
+async function datafinder() {
+
+    var search_company = document.getElementById('tick').value
+    document.getElementById('company-name').innerHTML = search_company;
+
+    const start = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol="
+    const company = search_company
+    const end = "&interval=5min&apikey=YIF9NU7FLVJWG46Q"
+    const url = start+company+end
+    
     const response = await fetch(url);
-    const alpha_data = await response.json();  
-    //console.log(alpha_data)
+    const data = await response.json();  
+    console.log(data)
+
 }
 
 
 
-//Analyst outlooks
+async function more_fund_data(){
 
-//headlines 
+    //sampmle
+    // 'https://api-v2.intrinio.com/indices/stock_market/$NDX/data_point/level/text?api_key=OjRhODk1ZjZkNDkxMzUzNTAwOTc5YjY1ZmE5NjFkMTU5
+    const test = 'https://api.intrinio.com/companies/MSFT/fundamentals?api_key=OjRhODk1ZjZkNDkxMzUzNTAwOTc5YjY1ZmE5NjFkMTU5'
+    const start = 'https://api.intrinio.com/companies/MSFT'
+    //const search_term = tick
+    const ending = '/fundamentals/text?api_key=OjRhODk1ZjZkNDkxMzUzNTAwOTc5YjY1ZmE5NjFkMTU5'
+
+    const url = start+ending
+    const response = await fetch(test);
+    const results = await response.json();
+    console.log(results)
+
+   // document.getElementById('fund-results') = results
+
+
+
+
+
+}
+
+//news headlines related to stock being searched
+function ticker_news() {
+
+    //https://api.intrinio.com/companies/MSFT/news?
+
+}
+
+
+//General news and headlines 
 
 async function stock_news() {
     const stock_news_url = ('https://api-v2.intrinio.com/companies/news?api_key=OjRhODk1ZjZkNDkxMzUzNTAwOTc5YjY1ZmE5NjFkMTU5')    
@@ -166,13 +210,14 @@ async function stock_news() {
 
 
 
-
-
-
-
 //Technical Data Section:
 
+//
+function technicals() {
 
+
+
+}
 
 
 
@@ -180,7 +225,7 @@ async function stock_news() {
 
     //stocktwits api data 
 
-    //Google Web Mentions/ Searches within certain time ranges
+    //
 
 
 

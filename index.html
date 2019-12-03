@@ -26,9 +26,11 @@
 <body>
   <main>
     <h3> Stock Oracle.io </h3>
-    <h4 id = "date"> </h4> 
+    <h5 id = "date"> </h5> 
     
-     SPY: <p id = "SPX"></p> <span> NDQ:<p id = "NDX"></p> DJI: <p id = "DJI"></p>         
+     SPY: <p id = "SPX"></p> <span> NDQ:<p id = "NDX"></p> DJI: <p id = "DJI"></p>   
+     <br>
+     Current news       
     <div class = "news" <p id = "stock_news"> </p> </div>
 
   <center>
@@ -37,19 +39,19 @@
       <div class="row">
         <div class="input-field col s4">
           <input id="tick">
-          <label for="email">Ticker Name</label>
+          <label for="Ticker"></label>
           <span class="-text" data-error="wrong" data-success="right">Enter a US Based Company</span>
         </div>
       </div>
     </form>
   </div>
   </center>
-    <button class="btn blue s4" type="submit" onclick = "search();">Search </button>
+    <button class="btn blue s4" type="submit" onclick = "more_fund_data();">Search </button>
   
   
     
     <h2 id = "company-name"></h2>
-    
+    <h4 id = 'current price'> </h4>     
     
 
     

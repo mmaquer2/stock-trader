@@ -22,7 +22,7 @@ Width: 100%;
 
 
 main{
-    margin-top: 10px;
+    
     background-color: white;
     height: 1700px;
 
@@ -45,7 +45,7 @@ form {
 .news {
 
   overflow: auto;
-  height: 150px;
+  height: 180px;
   border-style: solid;
 
 }
