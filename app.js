@@ -70,8 +70,8 @@ async function baselines() {
 
 async function search() {
 
-    var tick = document.getElementById("ticker").value
-    document.getElementById('company-name').innerHTML = tick;
+    //var tick = document.getElementById("ticker").value
+    //document.getElementById('company-name').innerHTML = tick;
 
     const url = "https://simfin.com/api/v1/companies/id/59265/shares/prices?api-key=C3l8ZkjFsFahwrd7V3OA6aoFirCvGKS4";
 
@@ -184,13 +184,4 @@ async function stock_news() {
 
 
 
-//select tab page
-function openCity(cityName) {
-    var i;
-    var x = document.getElementsByClassName("city");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none"; 
-    }
-    document.getElementById(cityName).style.display = "block"; 
-  }
-
+  

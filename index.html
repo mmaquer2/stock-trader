@@ -2,80 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Stock Tester</title>
+    <title>Stock Oracle.io</title>
     <link rel = "stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-    <script src="https://kit.fontawesome.com/8965181dc2.js"></script>
     <script src = "app.js"></script>
+    
+    
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     
 </head>
 <body>
-    <header>
-       <h2> Stock Oracle.io</h2>
-        <h4 id = "date"></h4>
-       
-    </header>
-    <main>
-    <div class="w3-bar w3-black">
-        <button class="w3-bar-item w3-button" onclick="openCity('fund')">Fundamental Analysis</button>
-        <button class="w3-bar-item w3-button" onclick="openCity('alt')">Alternate Data View</button>
-        <button class="w3-bar-item w3-button" onclick="openCity('tech')">Technical Outlook</button>
-      </div>
-
-    <br>
+  <main>
+    <h3> Stock Oracle.io </h3> 
     
-    <div class = "index">
-        SPY: <p id = "SPX"></p>       NDSQ: <p id = "NDX"></p>       DIA: <p id = "DJI"></p>         
-
-    </div>
-        <input type = "text" id = "ticker">
-        <br>
-        <br>
-        <button  onclick = "search()">Search</button>
-        
-
-        <div id="fund" class="city">
-                <h2 id = "company-name"></h2>
-             
-        <canvas id="myChart" width="200px" height="200px"></canvas>
-            
-        <br>
-        
-        <p id = "fund-results"></p>
-
-        <p id = "stock-news"> </p>
-
-        
-
-    </div>
+     SPY: <p id = "SPX"></p> NDQ:<p id = "NDX"></p> DJI: <p id = "DJI"></p>         
 
 
-    <div id="tech" class="city">
-
-        
-
-        <p id = "tech-results"></p>
-
-    </div>
-
-    <div id="alt" class="city">
-            
-
-            <p id = "alt-results"></p>
-
-    
-    
-    
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+          <input id="tick">
+          <label for="email">Ticker Name</label>
+          <span class="helper-text" data-error="wrong" data-success="right">Enter a US Based Company</span>
         </div>
+      </div>
+    </form>
+  </div>
+    <button class="btn waves-effect waves-light" type="submit" onclick = "search();">Search </button>
     
+    <h2 id = "company-name"></h2>
+    
+     <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#test1">Fundamentals</a></li>
+        <li class="tab col s3"><a class="active" href="#test2"> Technicals</a></li>
+        <li class="tab col s3"><a class="active" href="#test3">Alternative</a></li>
+        <li><p id = "date"> </p> </li>
+      </ul>
+    </div>
+    
+    
+  </button>
+    
+    <div id="test1" class="col s12">
+
+        
+        <canvas id="myChart" width="200px" height="200px"></canvas>
+    
+    </div>
+    <div id="test2" class="col s12">
+        
+            
+    
+    </div>
+
+    <div id="test3" class="col s12">
+   
+       
+                <p id = "alt-results"></p>
+    </div>
+    
+  </div>
+
+  
+
+        
+             
+        
+            
+       
 
 
     </main>
+        
 
-    <footer>
-        Created by Mike Maquera, 2019. 
-    </footer>
+ 
 </body>
 </html>
