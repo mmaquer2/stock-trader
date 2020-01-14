@@ -57,8 +57,6 @@ async function baselines() {
     //console.log(dji)
     //console.log(spx)
 
-    //% change of stock or index price 
-
     document.getElementById('SPX').innerHTML = spx;
     document.getElementById('NDX').innerHTML = ndx;
     document.getElementById('DJI').innerHTML = dji;
@@ -85,7 +83,8 @@ async function search() {
     console.log(data)
     var i = 0;
     var result = data.priceData[0].closeAdj
-    var result2 = data.priceData[4].closeAdj
+    var result2 = data.priceData[2].closeAdj
+    var result3 = data.priceData[4].closeAdj
 
     //loop through the data of the api and push it to the graph function 
    // for(i;i<data.length;i++){
@@ -94,18 +93,19 @@ async function search() {
    // }
     console.log(result)
     console.log(result2)
-
+    console.log(result3)
 
     //run graph function
-    graph(result,result2)
+    //graph(result,result2,result3)
     //fund_data(tick);
 
     
 }
- function graph(data1,data2) {
+ function graph(data1,data2,data3) {
 
     var a = data1;
     var b = data2;
+    var c = data3;
 
     var canvas = document.getElementById('myChart')
     var ctx = canvas.getContext("2d");
@@ -116,7 +116,7 @@ async function search() {
             labels: ['', '', ],
             datasets: [{
                 label: '',
-                data: [a, b],
+                data: [a, b, c],
 
 
                      }]
@@ -227,6 +227,11 @@ function technicals() {
 
     //
 
+function alt() {
 
+
+
+
+}
 
   
